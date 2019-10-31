@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config()
 const fighter = require('./controllers/fightercontroller')
 const user = require('./controllers/usercontroller')
-const { sequelize } = require('./db');
+const sequelize  = require('./db');
 
 app.use(express.json());
 
@@ -13,6 +13,6 @@ app.use('/api/user', user);
 
 sequelize.sync()
 
-    app.listen(3000, function(){
-        console.log('App is listening on 3000');
+    app.listen(process.env.PORT, function(){
+        console.log(`App is listening on ${process.env.PORT}`);
     })

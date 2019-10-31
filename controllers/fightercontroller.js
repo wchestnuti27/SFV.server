@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const sequelize = require('../db');
-// const Pie = require('../db').import('../models/user');
+const Pie = require('../db').import('../models/user');
 
 // const newUser = sequelize.import('../models/user');
 
